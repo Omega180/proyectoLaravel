@@ -46,7 +46,7 @@ class ProductoController extends Controller
         
     }
 
-    public function destroy($id) {
+    public function destroyDistribuidor($id) {
         $producto = Producto::find($id);
         $producto->delete();
         return redirect('/articulos')->with('eliminar', 'ok');
