@@ -1,6 +1,9 @@
 @extends('layouts.layout')
-@section('articulos')
-<a href="{{url('crearDistribuidor')}}" class='btn btn-primary'>Crear</a>
+@section('vistaDetalle')
+<div class="d-flex justify-content-start container my-2">
+<a href="{{url('crearDistribuidor')}}" class='btn btn-primary'>Crear nuevo distribuidor</a>
+</div>
+
 <table class='container-sm table table-dark table-striped'>
     <thead>
         <tr>
@@ -49,6 +52,7 @@
                     @csrf
                     <button type='submit' class='btn btn-danger'>Borrar</button>
                 </form>
+                <a href="{{url('/detalleDistribuidor/'.$distribuidor->id)}}" class='btn btn-light'>Detalles</a>
             </td>
         </tr>
         @endforeach

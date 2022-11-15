@@ -13,7 +13,7 @@
     </div>
     <div class="container-fluid d-flex justify-content-evenly mt-3">
         <button class="btn btn-primary">
-            <a class="bg-light" href="{{route('vistaCrud')}}">
+            <a class="bg-light" href="{{route('paginaDistribuidores')}}">
             Lista de proveedores
             </a> 
             

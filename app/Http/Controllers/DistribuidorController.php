@@ -56,4 +56,9 @@ class DistribuidorController extends Controller
         $distribuidor->delete();
         return redirect('/distribuidores')->with('eliminar', 'ok');
     }
+
+    public function detalleDistribuidor($id) {
+        $distribuidor = Distribuidor::find($id);
+        return view('vistaDetalle')->with('distribuidor',$distribuidor);
+    }
 }

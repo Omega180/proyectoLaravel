@@ -34,7 +34,7 @@
                             <a href="{{route('vistaPrincipal')}}" class="nav-link active" aria-current="page">Pantalla Principal</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('vistaLista')}}" class="nav-link active" aria-current="page">Lista de Proveedores</a>
+                            <a href="{{route('paginaDistribuidores')}}" class="nav-link active" aria-current="page">Lista de Proveedores</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{route('vistaCorreo')}}" class="nav-link active" aria-current="page">Enviar un Correo</a>
@@ -83,8 +83,6 @@
     @yield('vistaLista')
     @yield('vistaDetalle')
     @yield('vistaCorreo')
-    @yield('vistaCrud')
-    @yield('articulos')
     @yield('crear')
 <Footer class="mt-auto">
         <nav class="navbar bg-light d-flex justify-content-between">
