@@ -13,7 +13,8 @@ class DistribuidorController extends Controller
         /* El controlador automaticamente se dirige a la carpeta de views y el punto separa de carpeta */
         /* nombre del modelo */
         $distribuidores = Distribuidor::All();
-        return view('distribuidores.index')->with('distribuidores', $distribuidores);
+        /* $user = auth()->user(); */
+        return view('distribuidores.index')->with('distribuidores', $distribuidores);/* ->with('user', $user->id_rol); */
     }
     public function crearDistribuidor() {
         return view('distribuidores.crear');

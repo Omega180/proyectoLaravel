@@ -19,6 +19,7 @@
         </tr>
     </thead>
     <tbody>
+        <!-- Nos traemos los datos del distribuidor dependiendo de la cantidad de distribuidores que hay en la base de datos -->
     @foreach($distribuidores as $distribuidor)
         <tr>
             <td>
@@ -46,13 +47,18 @@
                 {{$distribuidor->telefono}}
             </td>
             <td>
+                
+                <div class="d-flex justify-content-between">
                 <a href="{{url('/editDistribuidor/'.$distribuidor->id)}}" class='btn btn-primary'>Editar</a>
                 <form action="{{url('/eliminarDistribuidor/'.$distribuidor->id)}}" class="d-inline formulario-eliminar">
                     @method('DELETE')
                     @csrf
                     <button type='submit' class='btn btn-danger'>Borrar</button>
                 </form>
+                
                 <a href="{{url('/detalleDistribuidor/'.$distribuidor->id)}}" class='btn btn-light'>Detalles</a>
+                </div>
+                
             </td>
         </tr>
         @endforeach
@@ -60,16 +66,17 @@
 </table>
 @endsection
 
-
+<!-- Seccion del Swift Alert -->
 @section('js')
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<!-- al volver del controlador chequea si se paso el dato eliminar con ok, si esto es asi, dispara la alaerta de eliminado -->
 @if(session('eliminar') == 'ok')
 <script>
     Swal.fire('Eliminado!', 'El registro ha sido eliminado correctamente', 'success')
 </script> 
 @endif
+<!-- Script que se dispara al presionar el boton delete -->
 <script>
     $('.formulario-eliminar').submit(function(e) {
         e.preventDefault();
