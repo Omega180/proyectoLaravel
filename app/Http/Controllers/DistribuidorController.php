@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Distribuidor;
+use App\Models\EmailLog;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailController;
 class DistribuidorController extends Controller
 
 {
@@ -61,5 +64,22 @@ class DistribuidorController extends Controller
     public function detalleDistribuidor($id) {
         $distribuidor = Distribuidor::find($id);
         return view('vistaDetalle')->with('distribuidor',$distribuidor);
+    }
+    public function enviarCorreo(Request $request) {
+        $user = auth()->user();
+        $emailLog = new EmailLog();  
+        $emailLog->usuario = $user->name;
+        $emailLog->nombre_proveedor = $request->get('proveedor');
+        $emailLog->correo = $request->get('correo');
+        $emailLog->asunto = $request->get('asunto');
+        $emailLog->mensaje = $request->get('informacion');
+        $correo = $request->get('correo');
+        $emailLog->save(); 
+        //Recordatorio de llamar el Controlador de correo en el tope del controlador
+        
+        $subject = $user->name.' / Prueba de envío de correo';
+        Mail::to($correo)->send(new MailController($user,$subject,$emailLog));
+        return redirect('/distribuidores')->with('user', $user);
+
     }
 }

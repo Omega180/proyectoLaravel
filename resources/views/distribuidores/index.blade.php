@@ -4,7 +4,9 @@
 <a href="{{url('crearDistribuidor')}}" class='btn btn-primary'>Crear nuevo distribuidor</a>
 </div>
 
-<table class='container-sm table table-dark table-striped'>
+
+    
+<table class='container table table-dark table-striped'>
     <thead>
         <tr>
             <th scope='col'>ID</th>
@@ -36,27 +38,27 @@
             </td>
             <td>
                 {{$distribuidor->direccion}}
-</td>
+            </td>
             <td>
                 {{$distribuidor->rubro}}
-</td>
+            </td>
             <td>
                 {{$distribuidor->correo}}
-</td>
+            </td>
             <td>
                 {{$distribuidor->telefono}}
             </td>
-            <td>
+            <td class="m-2">
                 
-                <div class="d-flex justify-content-between">
-                <a href="{{url('/editDistribuidor/'.$distribuidor->id)}}" class='btn btn-primary'>Editar</a>
-                <form action="{{url('/eliminarDistribuidor/'.$distribuidor->id)}}" class="d-inline formulario-eliminar">
-                    @method('DELETE')
-                    @csrf
-                    <button type='submit' class='btn btn-danger'>Borrar</button>
-                </form>
-                
-                <a href="{{url('/detalleDistribuidor/'.$distribuidor->id)}}" class='btn btn-light'>Detalles</a>
+                <div class="d-flex justify-content-between divAcciones">
+                    <a href="{{url('/editDistribuidor/'.$distribuidor->id)}}" class='btn btn-primary'>Editar</a>
+                    <form action="{{url('/eliminarDistribuidor/'.$distribuidor->id)}}" class="d-inline formulario-eliminar">
+                        @method('DELETE')
+                        @csrf
+                        <button type='submit' class='btn btn-danger'>Borrar</button>
+                    </form>
+                    
+                    <a href="{{url('/detalleDistribuidor/'.$distribuidor->id)}}" class='btn btn-light'>Detalles</a>
                 </div>
                 
             </td>
@@ -64,6 +66,19 @@
         @endforeach
     </tbody>
 </table>
+
+
+<style>
+    table {
+        font-size: 18px
+    }
+    .divAcciones {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2px;
+    }
+</style>
 @endsection
 
 <!-- Seccion del Swift Alert -->

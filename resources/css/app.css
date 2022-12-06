@@ -1,0 +1,12 @@
+
+
+.mainBody {
+    background-image: url(/public/images/background2.jpg);
+    background-color: aliceblue;
+    width: 100vh;
+    height: 100vh;
+}
+
+.navtitle {
+    font-size: 50px;
+}

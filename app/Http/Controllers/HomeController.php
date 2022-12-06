@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Distribuidor;
+use App\Models\EmailLog;
+
 
 class HomeController extends Controller
 {
@@ -26,7 +29,8 @@ class HomeController extends Controller
         return view('vistaPrincipal');
     }
     public function vistaPrincipal() {
-        return view('vistaPrincipal');
+        $emailLogs = EmailLog::All();
+        return view('vistaPrincipal')->with("emailLogs", $emailLogs);
     }
 
     public function vistaLista() {
@@ -34,9 +38,6 @@ class HomeController extends Controller
     }
     public function vistaDetalle() {
         return view('vistaDetalle');
-    }
-    public function vistaCorreo() {
-        return view('vistaCorreo');
     }
     public function vistaCrud() {
         return view('vistaCrud');
