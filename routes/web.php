@@ -24,14 +24,18 @@ Route::get('/vistaDetalle', [App\Http\Controllers\HomeController::class, 'vistaD
 
 //Rutas del CRUD Real
 /* storeDistribuidor */
-Route::get('/distribuidores', [App\Http\Controllers\DistribuidorController::class, 'index'])->name('paginaDistribuidores');
-Route::get('/crearDistribuidor', [App\Http\Controllers\DistribuidorController::class, 'crearDistribuidor'])->name('paginaCrear');
-Route::post('/guardarDistribuidor', [App\Http\Controllers\DistribuidorController::class, 'storeDistribuidor'])->name
-('paginaGuardar');
+Route::get('/distribuidores', [App\Http\Controllers\DistribuidorController::class, 
+'index'])->name('paginaDistribuidores');
+Route::get('/crearDistribuidor', [App\Http\Controllers\DistribuidorController::class, 
+'crearDistribuidor'])->name('paginaCrear');
+Route::post('/guardarDistribuidor', [App\Http\Controllers\DistribuidorController::class,
+ 'storeDistribuidor'])->name('paginaGuardar');
 // Recordatorio, la primera parte es la ruta que se utilizara para llamarla atraves de las vistas, la segunda es la funcion que se disparara en el controlador, y la tercera es el nombre que tendra la ruta
-Route::get('/editDistribuidor/{id}', [App\Http\Controllers\DistribuidorController::class, 'editDistribuidor'])->name('paginaEdit');
+Route::get('/editDistribuidor/{id}', [App\Http\Controllers\DistribuidorController::class, 
+'editDistribuidor'])->name('paginaEdit');
 
 Route::put('/editarDistribuidor/{id}', [App\Http\Controllers\DistribuidorController::class, 'updateDistribuidor'])->name('paginaUpdate');
+
 
 Route::get('/eliminarDistribuidor/{id}', [App\Http\Controllers\DistribuidorController::class, 'destroyDistribuidor'])->name('paginaDestroy');
 
@@ -39,3 +43,4 @@ Route::get('/detalleDistribuidor/{id}', [App\Http\Controllers\DistribuidorContro
 
 Route::post('/enviarCorreo', [App\Http\Controllers\DistribuidorController::class,
 'enviarCorreo'])->name('paginaCorreo');
+

@@ -9,7 +9,7 @@
             <div class='container-sm'>
                 <div class="card">
                     <div class="card-body">
-                    <span class="fs-3">Bienvenido al sistema de manejo de proveedores, abajo puedes encontrar los links hacia la lista completa de proveedores, puedes acceder al sistema de correos en los detalles de cada proveedor, al lado derecho tienes los registros de ultimos correos enviados con su respectiva informacion.</span>
+                    <span class="fs-3">Bienvenido al sistema de manejo de proveedores, abajo puedes encontrar los links hacia la lista completa de proveedores, puedes acceder al sistema de correos en los detalles de cada proveedor, al lado derecho tienes los registros de últimos correos enviados con su respectiva información.</span>
                     </div>
                 </div>
             </div>
@@ -24,13 +24,13 @@
         </div>
         <div class="container mt-2 correosDiv card">
             <div class="card-title m-2  ">
-                    <h1 class="tituloCard">Registros de los ultimos correos enviados</h1>
+                    <h1 class="tituloCard">Registros de los últimos correos enviados</h1>
                 </div>
             <div class="card m-2">
                 @foreach($emailLogs as $emailLog)
                 <div class="card m-2">
                     <div class="card-title m-2">
-                        <h1>Correo enviado hacia: {{$emailLog->nombre_proveedor}}</h1>
+                        <h1>Correo enviado hacía: {{$emailLog->nombre_proveedor}}</h1>
                     </div>
                     <div class="card-body m-2">
                         <p>Por agente: {{$emailLog->usuario}}</p>

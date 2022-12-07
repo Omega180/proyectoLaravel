@@ -50,10 +50,16 @@ class DistribuidorController extends Controller
         $distribuidores->rubro = $request->get('rubro');
         $distribuidores->correo = $request->get('correo');
         $distribuidores->telefono = $request->get('telefono');
-        
+        $distribuidores->listaNegraSiNo = $request->get('listaNegraSiNo');
+        if($distribuidores->listaNegraSiNo === "on") {
+            $distribuidores->listaNegraSiNo = 1;
+        } else {
+            $distribuidores->listaNegraSiNo = 0;
+        }
         $distribuidores->save();
         return redirect('/distribuidores');
     }
+
 
     public function destroyDistribuidor($id) {
         $distribuidor = Distribuidor::find($id);
@@ -65,6 +71,9 @@ class DistribuidorController extends Controller
         $distribuidor = Distribuidor::find($id);
         return view('vistaDetalle')->with('distribuidor',$distribuidor);
     }
+
+
+
     public function enviarCorreo(Request $request) {
         $user = auth()->user();
         $emailLog = new EmailLog();  

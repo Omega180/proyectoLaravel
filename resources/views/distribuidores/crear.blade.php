@@ -10,7 +10,7 @@
                     <input type="text" minlength="5" maxlength="20" id='nombre' name='nombre' class='form-control m-2' required placeholder='Ejemplo: Nestle'>
                 </div>
                 <div class='col mb-3'>
-                    <label class='form-label' for="razon_social">Razon Social</label>
+                    <label class='form-label' for="razon_social">Razón Social</label>
                     <input type="text" required maxlength="20" id='razon_social' name='razon_social' class='form-control m-2' placeholder='Ejemplo: Nestle inc'>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                     <input type="text" id='rut' required minlength="11" pattern="^\d{1,2}\.\d{3}\.\d{3}[-][0-9kK]{1}$" name='rut' class='form-control m-2' placeholder='Ejemplo: 90.703.000-8'>
                 </div>
                 <div class='col mb-3'>
-                    <label class='form-label' for="direccion">Direccion</label>
+                    <label class='form-label' for="direccion">Dirección</label>
                     <input type="text" maxlength="50" id='direccion' required name='direccion' class='form-control m-2' placeholder='Ejemplo: Santo Domingo 1702'>
                 </div>
             </div>
@@ -36,8 +36,8 @@
             </div>
             <div class="row">
                 <div class='col mb-3'>
-                    <label class='form-label' for="telefono">Telefono</label>
-                    <input type="text" id='telefono' required name='telefono' class='form-control m-2' placeholder='Ejemplo: (2) 2338 4000'>
+                    <label class='form-label' for="telefono">Teléfono</label>
+                    <input type="number" id='telefono' required name='telefono' class='form-control m-2' placeholder='Ejemplo: 2 2338 4000'>
                 </div>
             </div>
 

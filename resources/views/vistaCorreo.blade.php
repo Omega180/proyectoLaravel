@@ -15,7 +15,7 @@
                 </div>
                 <div class="contenedor-form">
                     <div class="mb-3">
-                        <label for="correo" class="form-label">Direccion de Correo</label>
+                        <label for="correo" class="form-label">Dirección de Correo</label>
                         <select name="selectEmail" class="form-control" id="selectEmail">
                             <option value="No Value">-Seleccione un correo</option>
                             @foreach($distribuidores as $distribuidor)

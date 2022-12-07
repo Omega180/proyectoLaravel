@@ -9,13 +9,13 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">RUT: {{$distribuidor->rut}}</li>
-                <li class="list-group-item">RAZON SOCIAL: {{$distribuidor->razon_social}}</li>
-                <li class="list-group-item">CORREO: {{$distribuidor->correo}}</li>
-                <li class="list-group-item">DIRECCION: {{$distribuidor->direccion}}</li>
-                <li class="list-group-item">RUBRO: {{$distribuidor->rubro}}</li>
-                <li class="list-group-item">TELEFONO: {{$distribuidor->telefono}}</li>
+                <li class="list-group-item">Razón Social: {{$distribuidor->razon_social}}</li>
+                <li class="list-group-item">Correo: {{$distribuidor->correo}}</li>
+                <li class="list-group-item">Dirección: {{$distribuidor->direccion}}</li>
+                <li class="list-group-item">Rubro: {{$distribuidor->rubro}}</li>
+                <li class="list-group-item">Teléfono: {{$distribuidor->telefono}}</li>
             </ul>
-            <div class="card-body">
+            <div class="card-body">  
                 <a href="{{url('/editDistribuidor/'.$distribuidor->id)}}" class='btn btn-primary'>EDITAR</a>
             </div>
         </div>
@@ -46,7 +46,8 @@
                         </div>
                 </div>
                 <div class="m-2">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+
                 </div>
             </form>
         </div>
