@@ -94,7 +94,7 @@
 </body>
 <style>
     body {
-        background: url(background2.jpg) no-repeat center center fixed;
+        background: url({{asset('images/background2.jpg')}}) no-repeat center center fixed;
         -webkit-background-size: cover;
         background-size: cover;
     }

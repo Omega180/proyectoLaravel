@@ -10815,3 +10815,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+html {
+  background: url(/public/images/background2.jpg);
+}

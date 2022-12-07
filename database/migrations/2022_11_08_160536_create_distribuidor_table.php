@@ -23,6 +23,7 @@ class CreateDistribuidorTable extends Migration
             $table->string("rubro", 20);
             $table->string("correo", 20);
             $table->integer("telefono");
+            $table->boolean("listaNegraSiNo");
             $table->timestamps();
         });
     }
