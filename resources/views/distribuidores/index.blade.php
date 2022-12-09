@@ -1,10 +1,12 @@
 @extends('layouts.layout')
 @section('vistaDetalle')
 <div class="mainContainer">
+    @if($user->id_rol == 1)
     <div class="d-flex justify-content-start container my-2">
         <a href="{{url('crearDistribuidor')}}" class='btn btn-primary'>Crear nuevo distribuidor</a>
     </div>
-    <table class='container tablaPrincipal table table-dark table-striped'>
+   @endif
+    <table class='container tablaPrincipal table table-dark table-striped mt-4'>
         <thead>
             <tr>
                 <th scope='col'>ID</th>
@@ -55,7 +57,7 @@
                     @endif
                 </td>
                 <td class="m-2">
-                    
+                @if ($user->id_rol == 1) 
                     <div class="d-flex justify-content-between divAcciones">
                         <a href="{{url('/editDistribuidor/'.$distribuidor->id)}}" class='btn btn-primary'>Editar</a>
                         <form action="{{url('/eliminarDistribuidor/'.$distribuidor->id)}}" class="d-inline formulario-eliminar">
@@ -63,13 +65,13 @@
                             @csrf
                             <button type='submit' class='btn btn-danger'>Borrar</button>
                         </form>
-                        
+                @endif 
                         <a href="{{url('/detalleDistribuidor/'.$distribuidor->id)}}" class='btn btn-light'>Detalles</a>
                     </div>
                     
                 </td>
             </tr>
-            @endforeach
+        @endforeach
         </tbody>
     </table>
 

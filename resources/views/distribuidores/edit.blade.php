@@ -11,21 +11,21 @@
             <div class="row">
                 <div class='col mb-3'> 
                     <label for="nombre" class='form-label'>Nombre</label>
-                    <input type="text" minlength="5" maxlength="20" required value="{{$distribuidor->nombre}}" id='nombre' name='nombre' class='form-control m-2' placeholder='Ejemplo: Nestle'>
+                    <input type="text" minlength="5" maxlength="100" required value="{{$distribuidor->nombre}}" id='nombre' name='nombre' class='form-control m-2' placeholder='Ejemplo: Nestle'>
                 </div>
                 <div class='col mb-3'>
                     <label class='form-label' for="razon_social">Razón Social</label>
-                    <input type="text" required maxlength="20" value="{{$distribuidor->razon_social}}"id='razon_social' name='razon_social' class='form-control m-2' placeholder='Ejemplo: Nestle inc'>
+                    <input type="text" required maxlength="100" value="{{$distribuidor->razon_social}}"id='razon_social' name='razon_social' class='form-control m-2' placeholder='Ejemplo: Nestle inc'>
                 </div>
             </div>
            <div class="row">           
                 <div class='col mb-3'>
                     <label class='form-label' for="rut">Rut</label>
-                    <input type="text" required minlength="11" value="{{$distribuidor->rut}}"id='rut' name='rut' class='form-control m-2' placeholder='Ejemplo: 90.703.000-8'>
+                    <input type="text" required minlength="12" value="{{$distribuidor->rut}}"id='rut' name='rut' class='form-control m-2' placeholder='Ejemplo: 90.703.000-8'>
                 </div>
                 <div class='col mb-3'>
                     <label class='form-label' for="direccion">Dirección</label>
-                    <input type="text" maxlength="50" required value="{{$distribuidor->direccion}}"id='direccion' name='direccion' class='form-control m-2' placeholder='Ejemplo: Santo Domingo 1702'>
+                    <input type="text" maxlength="100" required value="{{$distribuidor->direccion}}"id='direccion' name='direccion' class='form-control m-2' placeholder='Ejemplo: Santo Domingo 1702'>
                 </div>
         </div>
             <div class="row">

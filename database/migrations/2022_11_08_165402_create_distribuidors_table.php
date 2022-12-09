@@ -15,12 +15,12 @@ class CreateDistribuidorsTable extends Migration
     {
         Schema::create('distribuidors', function (Blueprint $table) {
             $table->id();
-            $table->string("nombre", 20);
-            $table->string("razon_social", 20);
+            $table->string("nombre", 100);
+            $table->string("razon_social", 100);
             $table->string("rut",12);
-            $table->string("direccion", 30);
-            $table->string("rubro", 20);
-            $table->string("correo", 20);
+            $table->string("direccion", 100);
+            $table->string("rubro", 100);
+            $table->string("correo", 100);
             $table->integer("telefono");
             $table->boolean("listaNegraSiNo");
             $table->timestamps();

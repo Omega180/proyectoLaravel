@@ -15,10 +15,10 @@ class EmailLogs extends Migration
     {
         Schema::create('email_logs', function (Blueprint $table) {
             $table->id();
-            $table->string("usuario", 50);
-            $table->string("nombre_proveedor", 50);
-            $table->string("correo", 50);
-            $table->string("asunto", 50);
+            $table->string("usuario", 100);
+            $table->string("nombre_proveedor", 100);
+            $table->string("correo", 100);
+            $table->string("asunto", 200);
             $table->string("mensaje", 250);
             $table->timestamps();
         });
